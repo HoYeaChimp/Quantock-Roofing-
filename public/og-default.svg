@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f5f7"/>
+      <stop offset="1" stop-color="#e8eef9"/>
+    </linearGradient>
+    <radialGradient id="orb1" cx="0.2" cy="0.1" r="0.6">
+      <stop offset="0" stop-color="#0a84ff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#0a84ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="0.9" cy="0.9" r="0.6">
+      <stop offset="0" stop-color="#5e5ce6" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#5e5ce6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#orb1)"/>
+  <rect width="1200" height="630" fill="url(#orb2)"/>
+  <text x="80" y="285" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="#1d1d1f">Quantock Roofing</text>
+  <text x="80" y="365" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="34" fill="#6e6e73">New roofs, repairs and flat roofing</text>
+  <text x="80" y="470" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" fill="#0a66e8">Somerset, Bristol, Bath and Devon</text>
+</svg>
