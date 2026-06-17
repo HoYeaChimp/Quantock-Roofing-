@@ -12,7 +12,7 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function AppleInspiredHero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-44">
+    <section className="theme-dark relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-44">
       <PremiumBackground variant="hero" intensity="high" />
 
       <Container size="wide" className="relative">
@@ -22,12 +22,12 @@ export function AppleInspiredHero() {
               <BrandLogo
                 href=""
                 priority
-                className="mb-8 w-[210px] sm:w-[250px]"
+                className="mb-8 w-[225px] sm:w-[280px]"
               />
             </Reveal>
 
             <Reveal>
-              <p className="text-eyebrow mb-4">
+              <p className="text-eyebrow mb-4 text-white/70">
                 New roofs - repairs - flat roofing - Somerset and beyond
               </p>
               <h1 className="text-display text-balance">

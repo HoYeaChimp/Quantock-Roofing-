@@ -13,9 +13,9 @@ export function HeroVisual({ className }: { className?: string }) {
         style={{ background: "var(--orb-1)" }}
       />
 
-      <div className="glass animate-float-slow relative rounded-2xl p-5 shadow-[var(--shadow-premium)]">
-        <div className="mb-5 rounded-xl border border-border bg-white p-3">
-          <BrandLogo href="" className="mx-auto w-[180px]" />
+      <div className="glass animate-float-slow relative rounded-lg p-5 shadow-[var(--shadow-premium)]">
+        <div className="mb-5">
+          <BrandLogo href="" className="mx-auto w-[190px]" />
         </div>
 
         <div className="mb-4 flex items-center justify-between">
@@ -27,7 +27,7 @@ export function HeroVisual({ className }: { className?: string }) {
         </div>
 
         <ul className="space-y-3">
-          <li className="flex items-center gap-3 rounded-2xl bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
+          <li className="flex items-center gap-3 rounded-lg bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-success/10 text-success">
               <Icon name="whatsapp" />
             </span>
@@ -42,7 +42,7 @@ export function HeroVisual({ className }: { className?: string }) {
             </span>
           </li>
 
-          <li className="flex items-center gap-3 rounded-2xl bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
+          <li className="flex items-center gap-3 rounded-lg bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
               <Icon name="file-text" />
             </span>
@@ -57,7 +57,7 @@ export function HeroVisual({ className }: { className?: string }) {
             </span>
           </li>
 
-          <li className="flex items-center gap-3 rounded-2xl bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
+          <li className="flex items-center gap-3 rounded-lg bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
               <Icon name="calendar" />
             </span>
@@ -72,7 +72,7 @@ export function HeroVisual({ className }: { className?: string }) {
             </span>
           </li>
 
-          <li className="flex items-center gap-3 rounded-2xl bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
+          <li className="flex items-center gap-3 rounded-lg bg-surface/80 p-3.5 shadow-[var(--shadow-soft)]">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
               <Icon name="mail" />
             </span>
@@ -89,7 +89,7 @@ export function HeroVisual({ className }: { className?: string }) {
         </ul>
       </div>
 
-      <div className="glass animate-float absolute -right-3 -top-5 flex items-center gap-2 rounded-2xl px-4 py-3 shadow-[var(--shadow-premium)] sm:-right-8">
+      <div className="glass animate-float absolute -right-3 -top-5 flex items-center gap-2 rounded-lg px-4 py-3 shadow-[var(--shadow-premium)] sm:-right-8">
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
           <Icon name="map-pin" className="h-4 w-4" />
         </span>
@@ -102,7 +102,7 @@ export function HeroVisual({ className }: { className?: string }) {
         <Icon name="check" className="h-4 w-4 text-success" />
       </div>
 
-      <div className="glass animate-float-slow absolute -bottom-5 -left-3 flex items-center gap-2 rounded-2xl px-4 py-3 shadow-[var(--shadow-premium)] sm:-left-8">
+      <div className="glass animate-float-slow absolute -bottom-5 -left-3 flex items-center gap-2 rounded-lg px-4 py-3 shadow-[var(--shadow-premium)] sm:-left-8">
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-success/10 text-success">
           <Icon name="clock" className="h-4 w-4" />
         </span>

@@ -8,6 +8,7 @@ interface BrandLogoProps {
   imageClassName?: string;
   priority?: boolean;
   href?: string;
+  framed?: boolean;
 }
 
 export function BrandLogo({
@@ -15,27 +16,35 @@ export function BrandLogo({
   imageClassName,
   priority = false,
   href = "/",
+  framed = true,
 }: BrandLogoProps) {
   const logo = (
     <Image
       src="/brand/quantock-roofing-logo.png"
       alt={site.businessName}
       width={1400}
-      height={841}
+      height={855}
       priority={priority}
       className={cn("h-auto w-full object-contain", imageClassName)}
       sizes="(max-width: 640px) 160px, 220px"
     />
   );
 
+  const logoFrame = cn(
+    "inline-flex items-center justify-center",
+    framed &&
+      "rounded-xl border border-white/35 bg-white/45 p-2 shadow-[var(--shadow-soft)] backdrop-blur-xl",
+    className
+  );
+
   if (!href) {
-    return <div className={cn("block", className)}>{logo}</div>;
+    return <div className={logoFrame}>{logo}</div>;
   }
 
   return (
     <Link
       href={href}
-      className={cn("block shrink-0", className)}
+      className={cn("shrink-0", logoFrame)}
       aria-label={`${site.businessName} home`}
     >
       {logo}
