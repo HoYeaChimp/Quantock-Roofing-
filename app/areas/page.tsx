@@ -18,9 +18,9 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { AreaMapAbstract } from "@/components/visuals/AreaMapAbstract";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Areas Covered | Somerset, Bristol, Bath & Devon",
+  title: "Areas Covered | Somerset, Bristol & Devon",
   description:
-    "Roofing services across Bridgwater, Taunton, Burnham-on-Sea, Weston-super-Mare, Bristol, Bath and selected Devon towns.",
+    "Roofing services across Bridgwater, Taunton, Burnham-on-Sea, Weston-super-Mare, Bristol and selected Devon towns.",
   path: "/areas",
 });
 

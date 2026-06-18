@@ -10,7 +10,7 @@ export const site = {
   legalName: "Quantock Paving Ltd",
   tagline: "New roofs, roof repairs and flat roofing across the South West.",
   description:
-    "Quantock Roofing is a local roofing team based near Bridgwater, installing new tiled and slate roofs, repairing leaks, renewing flat roofs and handling roofline work across Somerset, Bristol, Bath, North Somerset and selected areas of Devon.",
+    "Quantock Roofing is a local roofing team based near Bridgwater, installing new tiled and slate roofs, repairing leaks, renewing flat roofs and handling roofline work across Somerset, Bristol and selected areas of Devon.",
   domain: "quantockroofing.co.uk",
   siteUrl:
     (process.env.NEXT_PUBLIC_SITE_URL || "https://quantockroofing.co.uk").replace(/\/$/, ""),
@@ -57,7 +57,7 @@ export const site = {
     {
       title: "Local roofing team",
       detail:
-        "Based near Bridgwater and covering Somerset, Bristol, Bath, North Somerset and selected Devon towns.",
+        "Based near Bridgwater and covering Somerset, Bristol and selected Devon towns.",
       todo: false,
       icon: "map-pin",
     },
@@ -106,7 +106,7 @@ export const site = {
   companyRegistration: "16165417",
   vatNumber: "",
   priceRange: "",
-  serviceRadius: "Somerset, Bristol, Bath, North Somerset and selected areas of Devon",
+  serviceRadius: "Somerset, Bristol and selected areas of Devon",
 };
 
 export type Site = typeof site;

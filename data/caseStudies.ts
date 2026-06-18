@@ -8,6 +8,8 @@ export interface CaseStudy {
   outcome: string;
   beforeLabel: string;
   afterLabel: string;
+  image: string;
+  imageAlt: string;
   isPlaceholder: boolean;
 }
 
@@ -26,6 +28,8 @@ export const caseStudies: CaseStudy[] = [
       "A clean, weather-ready tiled roof finish, with workmanship guarantee terms confirmed as part of the quoted work.",
     beforeLabel: "Before",
     afterLabel: "Finished tiled roof",
+    image: "/images/projects/new-tiled-roof-grey-01.jpg",
+    imageAlt: "Completed grey tiled roof project image",
     isPlaceholder: false,
   },
   {
@@ -42,6 +46,8 @@ export const caseStudies: CaseStudy[] = [
       "A sharper, more durable roof covering suited to the character of the property.",
     beforeLabel: "During works",
     afterLabel: "Slate re-roof detail",
+    image: "/images/projects/slate-re-roof-in-progress.jpg",
+    imageAlt: "Slate roof project in progress",
     isPlaceholder: false,
   },
   {
@@ -58,6 +64,8 @@ export const caseStudies: CaseStudy[] = [
       "A cleaner, more reliable flat roof surface with the specification explained before work was agreed.",
     beforeLabel: "Before",
     afterLabel: "Renewed flat roof",
+    image: "/images/projects/epdm-rubber-flat-roof.jpg",
+    imageAlt: "EPDM rubber flat roof project image",
     isPlaceholder: false,
   },
 ];

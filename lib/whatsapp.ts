@@ -46,21 +46,30 @@ export function createWhatsAppLink({
 }
 
 export function defaultWhatsAppMessage(): string {
-  return "Hi, I'm interested in your services. Could you help me with a quote?";
+  return "Hi Quantock Roofing, I would like advice/a quote for roofing work. My postcode is: ";
 }
 
 export function serviceWhatsAppMessage(serviceName: string): string {
-  return `Hi, I'm interested in ${serviceName}. Could you tell me the next step?`;
+  if (/new roof/i.test(serviceName)) {
+    return "Hi Quantock Roofing, I would like a quote for a new roof. My postcode is: ";
+  }
+  if (/repair|emergency/i.test(serviceName)) {
+    return "Hi Quantock Roofing, I have a roof repair/leak issue. My postcode is: I can send photos.";
+  }
+  if (/flat/i.test(serviceName)) {
+    return "Hi Quantock Roofing, I would like advice/a quote for a flat roof. My postcode is: ";
+  }
+  return `Hi Quantock Roofing, I would like advice/a quote for ${serviceName}. My postcode is: `;
 }
 
 export function areaWhatsAppMessage(areaName: string): string {
-  return `Hi, I'm in ${areaName} and I'm interested in your services. Could you help?`;
+  return `Hi Quantock Roofing, I'm in ${areaName} and would like roofing advice/a quote. My postcode is: `;
 }
 
 export function quoteWhatsAppMessage(): string {
-  return "Hi, I'd like a quote. Here are a few details:";
+  return "Hi Quantock Roofing, I would like a roofing quote. My postcode is: I can send photos.";
 }
 
 export function bookingWhatsAppMessage(): string {
-  return "Hi, I'd like to book a callback. Could you help me arrange a time?";
+  return "Hi Quantock Roofing, I would like to book a roofing inspection/callback. My postcode is: ";
 }

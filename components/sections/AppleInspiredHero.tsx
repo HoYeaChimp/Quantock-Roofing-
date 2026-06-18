@@ -8,7 +8,6 @@ import { Icon } from "@/components/ui/Icon";
 import { PremiumBackground } from "@/components/visuals/PremiumBackground";
 import { HeroVisual } from "@/components/visuals/HeroVisual";
 import { Reveal } from "@/components/ui/Reveal";
-import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function AppleInspiredHero() {
   return (
@@ -19,25 +18,18 @@ export function AppleInspiredHero() {
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
           <div className="max-w-xl">
             <Reveal>
-              <BrandLogo
-                href=""
-                priority
-                className="mb-8 w-[225px] sm:w-[280px]"
-              />
-            </Reveal>
-
-            <Reveal>
               <p className="text-eyebrow mb-4 text-white/70">
-                New roofs - repairs - flat roofing - Somerset and beyond
+                New roofs - repairs - flat roofing - Somerset, Bristol & Devon
               </p>
               <h1 className="text-display text-balance">
-                Roofing help that makes the{" "}
-                <span className="text-primary">next step</span> simple
+                Premium roofing contractors across{" "}
+                <span className="text-primary">Somerset, Bristol & Devon</span>
               </h1>
               <p className="text-lead mt-6 max-w-lg text-pretty">
-                Tell us what is happening with your roof and get straight,
-                practical advice: repair if repair is sensible, replacement
-                only when it is the better long-term answer.
+                Clear roofing advice, free written quotes and careful
+                workmanship from a local team based near Bridgwater. Send
+                photos by WhatsApp, call for urgent advice, or request a free
+                roofing quote online.
               </p>
             </Reveal>
 

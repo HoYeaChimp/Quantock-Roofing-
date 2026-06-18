@@ -11,6 +11,8 @@ export const mainNav: NavItem[] = [
   { label: "Results", href: "/results" },
   { label: "Reviews", href: "/reviews" },
   { label: "About", href: "/about" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /** Extended list used by the mobile menu */

@@ -85,7 +85,7 @@ export const faqGroups: FaqGroup[] = [
       {
         question: "Which areas do you cover?",
         answer:
-          "We are based near Bridgwater and cover Somerset, Bristol, Bath, North Somerset and selected parts of Devon.",
+          "We are based near Bridgwater and cover Somerset, Bristol and selected parts of Devon.",
       },
       {
         question: "Do you have branch offices in every town?",

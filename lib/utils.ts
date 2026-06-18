@@ -30,10 +30,27 @@ export async function submitLead(
   payload: Record<string, unknown>
 ): Promise<LeadResponse> {
   try {
+    const browserContext =
+      typeof window === "undefined"
+        ? {}
+        : {
+            source_url: window.location.href,
+            page: window.location.pathname,
+            referrer: document.referrer,
+            utm_source: new URLSearchParams(window.location.search).get("utm_source") || "",
+            utm_medium: new URLSearchParams(window.location.search).get("utm_medium") || "",
+            utm_campaign: new URLSearchParams(window.location.search).get("utm_campaign") || "",
+            utm_term: new URLSearchParams(window.location.search).get("utm_term") || "",
+            utm_content: new URLSearchParams(window.location.search).get("utm_content") || "",
+            gclid: new URLSearchParams(window.location.search).get("gclid") || "",
+            gbraid: new URLSearchParams(window.location.search).get("gbraid") || "",
+            wbraid: new URLSearchParams(window.location.search).get("wbraid") || "",
+            fbclid: new URLSearchParams(window.location.search).get("fbclid") || "",
+          };
     const res = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ ...browserContext, ...payload }),
     });
     const data = (await res.json()) as LeadResponse;
     if (!res.ok) {

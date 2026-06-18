@@ -22,23 +22,26 @@ export function buildMetadata({
 }: BuildMetadataArgs): Metadata {
   const url = `${site.siteUrl}${path}`;
   const ogImage = image || "/brand/quantock-roofing-logo.png";
+  const cleanTitle = title
+    .replace(/\s*\|\s*Quantock Roofing\s*$/i, "")
+    .replace(/\s*-\s*Quantock Roofing\s*$/i, "");
 
   return {
-    title,
+    title: cleanTitle,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title,
+      title: cleanTitle,
       description,
       url,
       siteName: site.businessName,
       type: "website",
       locale: "en_GB",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: cleanTitle }],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: cleanTitle,
       description,
       images: [ogImage],
     },

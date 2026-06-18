@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Icon } from "@/components/ui/Icon";
 import { cn } from "@/lib/cn";
-import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function HeroVisual({ className }: { className?: string }) {
   return (
@@ -14,8 +14,19 @@ export function HeroVisual({ className }: { className?: string }) {
       />
 
       <div className="glass animate-float-slow relative rounded-lg p-5 shadow-[var(--shadow-premium)]">
-        <div className="mb-5">
-          <BrandLogo href="" className="mx-auto w-[190px]" />
+        <div className="relative mb-5 aspect-[4/3] overflow-hidden rounded-lg border border-white/15">
+          <Image
+            src="/images/projects/new-tiled-roof-grey-01.jpg"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 90vw, 420px"
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+            <p className="text-sm font-semibold text-white">Real roofing project image</p>
+            <p className="text-xs text-white/75">New tiled roof finish</p>
+          </div>
         </div>
 
         <div className="mb-4 flex items-center justify-between">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { caseStudies } from "@/data/caseStudies";
@@ -8,7 +9,6 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { BeforeAfterPlaceholder } from "@/components/visuals/BeforeAfterPlaceholder";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = buildMetadata({
@@ -43,10 +43,15 @@ export default function ResultsPage() {
             {caseStudies.map((study, i) => (
               <Reveal key={study.title} delay={i * 60}>
                 <article className="card-premium grid gap-8 p-7 sm:p-9 lg:grid-cols-2">
-                  <BeforeAfterPlaceholder
-                    beforeLabel={study.beforeLabel}
-                    afterLabel={study.afterLabel}
-                  />
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-surface">
+                    <Image
+                      src={study.image}
+                      alt={study.imageAlt}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
                   <div>
                     <div className="flex flex-wrap gap-2">
                       <Badge tone="primary">{study.service}</Badge>

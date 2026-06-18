@@ -19,7 +19,7 @@ import { Icon } from "@/components/ui/Icon";
 export const metadata: Metadata = buildMetadata({
   title: "Services | Roofing Services Across the South West",
   description:
-    "New roofs, roof repairs, flat roofs, roofline, dry ridge, dry verge and emergency roofing enquiries across Somerset, Bristol, Bath and Devon.",
+    "New roofs, roof repairs, flat roofs, roofline, dry ridge, dry verge and emergency roofing enquiries across Somerset, Bristol and Devon.",
   path: "/services",
 });
 

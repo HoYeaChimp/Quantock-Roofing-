@@ -1,10 +1,10 @@
+import Image from "next/image";
 import { caseStudies } from "@/data/caseStudies";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { BeforeAfterPlaceholder } from "@/components/visuals/BeforeAfterPlaceholder";
 
 export function ResultsPreview() {
   return (
@@ -19,10 +19,15 @@ export function ResultsPreview() {
           {caseStudies.slice(0, 2).map((study, i) => (
             <Reveal key={study.title} delay={i * 100}>
               <article className="card-premium flex h-full flex-col p-6 sm:p-7">
-                <BeforeAfterPlaceholder
-                  beforeLabel={study.beforeLabel}
-                  afterLabel={study.afterLabel}
-                />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-surface">
+                  <Image
+                    src={study.image}
+                    alt={study.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="mt-5 flex flex-wrap gap-2">
                   <Badge tone="primary">{study.service}</Badge>
                   <Badge>{study.area}</Badge>

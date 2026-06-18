@@ -68,8 +68,11 @@ export async function POST(request: Request) {
 
   const lead = {
     receivedAt: new Date().toISOString(),
+    business: "Quantock Roofing",
+    website: "quantockroofing.co.uk",
     formType: clean(body.formType, 40) || "website_form",
     service: clean(body.service, 120),
+    context: clean(body.context, 160),
     details: clean(body.details || body.message || body.notes, 2000),
     area: clean(body.area, 120),
     postcode: clean(body.postcode, 30),
@@ -83,20 +86,35 @@ export async function POST(request: Request) {
     email,
     consent: body.consent === true,
     page: clean(body.page, 300),
+    source_url: clean(body.source_url || body.sourceUrl, 300),
+    page_type: clean(body.page_type || body.pageType, 80),
+    service_slug: clean(body.service_slug || body.serviceSlug, 120),
+    area_slug: clean(body.area_slug || body.areaSlug, 120),
+    utm_source: clean(body.utm_source || body.utmSource, 120),
+    utm_medium: clean(body.utm_medium || body.utmMedium, 120),
+    utm_campaign: clean(body.utm_campaign || body.utmCampaign, 160),
+    utm_term: clean(body.utm_term || body.utmTerm, 160),
+    utm_content: clean(body.utm_content || body.utmContent, 160),
+    gclid: clean(body.gclid, 160),
+    gbraid: clean(body.gbraid, 160),
+    wbraid: clean(body.wbraid, 160),
+    fbclid: clean(body.fbclid, 160),
+    userAgent: clean(request.headers.get("user-agent"), 300),
   };
 
   const location = [lead.area, lead.postcode].filter(Boolean).join(" ") || "not given";
-  const subject = `New Quantock Roofing ${lead.formType}: ${lead.service || "enquiry"} - ${location}`;
+  const leadService = lead.service || lead.context || "enquiry";
+  const subject = `New Quantock Roofing Lead - ${leadService} - ${location}`;
   const textBody = Object.entries(lead).map(([key, value]) => `${key}: ${value}`).join("\n");
 
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail =
     process.env.LEAD_NOTIFICATION_EMAIL ??
     process.env.LEAD_TO_EMAIL ??
-    "quantockroofing@gmail.com";
+    "info@quantockpaving.co.uk";
   const fromEmail =
     process.env.LEAD_FROM_EMAIL ?? "Website Leads <website@quantockroofing.co.uk>";
-  const formspreeId = process.env.FORMSPREE_FORM_ID;
+  const formspreeId = process.env.FORMSPREE_FORM_ID || "xeewrdwe";
 
   try {
     if (apiKey) {

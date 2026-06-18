@@ -18,7 +18,7 @@ import { PremiumBackground } from "@/components/visuals/PremiumBackground";
 export const metadata: Metadata = buildMetadata({
   title: "Get a Free Quote | 60-Second Form, No Obligation",
   description:
-    "Request a free roofing quote from Quantock Roofing. New roofs, repairs, flat roofs and roofline across Somerset, Bristol, Bath and Devon.",
+    "Request a free roofing quote from Quantock Roofing. New roofs, repairs, flat roofs and roofline across Somerset, Bristol and Devon.",
   path: "/quote",
 });
 
@@ -49,6 +49,10 @@ export default function QuotePage() {
           </Reveal>
 
           <div className="mx-auto mt-10 max-w-xl text-center">
+            <p className="mb-4 rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground">
+              Photos help us advise quickly. Please take them safely from the
+              ground or a window - never climb onto the roof.
+            </p>
             <p className="text-sm font-semibold text-muted-foreground">
               Rather skip the form?
             </p>

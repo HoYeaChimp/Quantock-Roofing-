@@ -17,7 +17,7 @@ import { AppleDepthCards } from "@/components/visuals/AppleDepthCards";
 export const metadata: Metadata = buildMetadata({
   title: "About Quantock Roofing | Local Roofing Team Near Bridgwater",
   description:
-    "About Quantock Roofing: a local roofing team near Bridgwater serving Somerset, Bristol, Bath, North Somerset and selected Devon towns.",
+    "About Quantock Roofing: a local roofing team near Bridgwater serving Somerset, Bristol and selected Devon towns.",
   path: "/about",
 });
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-[0.9375rem] leading-relaxed text-muted-foreground">
                 <p>
                   Quantock Roofing works from a base near Bridgwater, covering
-                  Somerset, Bristol, Bath, North Somerset and selected areas of
+                  Somerset, Bristol and selected areas of
                   Devon. The site is set up around the way roofing decisions
                   actually happen: something leaks, something looks tired, or a
                   roof has reached the point where the homeowner needs a clear

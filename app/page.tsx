@@ -19,9 +19,9 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = buildMetadata({
-  title: `${site.businessName} | Roofers in Somerset, Bristol, Bath & Devon`,
+  title: `${site.businessName} | Roofers in Somerset, Bristol & Devon`,
   description:
-    "New roofs, roof repairs, flat roofs, roofline and emergency roofing enquiries across Somerset, Bristol, Bath and Devon. Free written quotes.",
+    "New roofs, roof repairs, flat roofs, roofline and emergency roofing enquiries across Somerset, Bristol and Devon. Free written quotes.",
   path: "/",
 });
 

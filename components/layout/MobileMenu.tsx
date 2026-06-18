@@ -13,7 +13,6 @@ import {
   trackWhatsAppClick,
 } from "@/lib/tracking";
 import { Icon } from "@/components/ui/Icon";
-import { BrandLogo } from "@/components/ui/BrandLogo";
 
 interface MobileMenuProps {
   open: boolean;
@@ -96,7 +95,13 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         )}
       >
         <div className="mb-6 flex items-center justify-between">
-          <BrandLogo className="w-[178px]" />
+          <Link
+            href="/"
+            className="text-lg font-black tracking-tight text-foreground"
+            onClick={onClose}
+          >
+            {site.businessName}
+          </Link>
           <button
             type="button"
             className="inline-flex h-11 w-11 items-center justify-center rounded-full text-foreground hover:bg-foreground/5"

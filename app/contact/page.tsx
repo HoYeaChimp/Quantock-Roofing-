@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { localBusinessSchema } from "@/lib/schema";
@@ -15,13 +16,12 @@ import { LeadActionCard } from "@/components/ui/LeadActionCard";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { ImagePlaceholder } from "@/components/visuals/ImagePlaceholder";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Us | Call, WhatsApp, or Message",
   description:
-    "Contact Quantock Roofing by phone, WhatsApp, email or form for roofing quotes across Somerset, Bristol, Bath and Devon.",
+    "Contact Quantock Roofing by phone, WhatsApp, email or form for roofing quotes across Somerset, Bristol and Devon.",
   path: "/contact",
 });
 
@@ -140,11 +140,15 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
-              <ImagePlaceholder
-                label="Map / coverage image"
-                aspect="aspect-[16/9]"
-                icon="map-pin"
-              />
+              <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-border bg-card shadow-[var(--shadow-premium)]">
+                <Image
+                  src="/images/projects/drone-survey-tiled-roof-03.jpg"
+                  alt="Roofing project viewed from above"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </Container>

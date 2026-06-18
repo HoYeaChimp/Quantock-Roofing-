@@ -1,11 +1,10 @@
+import Image from "next/image";
 import type { Service } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
 import { Badge } from "@/components/ui/Badge";
-import { ServiceIllustration } from "@/components/visuals/ServiceIllustration";
-import type { IconName } from "@/components/ui/Icon";
 
 /** The core informational sections of a service page */
 export function ServiceDetail({ service }: { service: Service }) {
@@ -92,8 +91,16 @@ export function ServiceDetail({ service }: { service: Service }) {
                 </ul>
               </div>
             </div>
-            <Reveal className="hidden lg:block">
-              <ServiceIllustration icon={service.icon as IconName} />
+            <Reveal>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-card shadow-[var(--shadow-premium)]">
+                <Image
+                  src={service.image}
+                  alt={`${service.name} roofing project image`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </Reveal>
           </div>
         </Container>

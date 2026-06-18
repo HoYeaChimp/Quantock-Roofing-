@@ -5,7 +5,6 @@ import { services } from "@/data/services";
 import { priorityAreas } from "@/data/serviceAreas";
 import { Container } from "@/components/ui/Container";
 import { ContactActions } from "@/components/ui/ContactActions";
-import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -16,7 +15,9 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand + contact */}
           <div className="lg:col-span-2">
-            <BrandLogo className="w-[220px]" />
+            <p className="text-2xl font-black tracking-tight text-foreground">
+              {site.businessName}
+            </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
               {site.tagline} Serving customers across {priorityAreas[0]?.name}{" "}
               and the surrounding areas.
