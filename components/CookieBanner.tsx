@@ -40,7 +40,7 @@ export function CookieBanner() {
     <div
       role="region"
       aria-label="Cookie consent"
-      className="glass fixed bottom-24 left-3 right-3 z-50 rounded-3xl border border-border p-5 shadow-[var(--shadow-premium)] sm:left-auto sm:right-6 sm:max-w-sm md:bottom-6"
+      className="fixed bottom-24 left-3 right-3 z-50 rounded-lg border border-border bg-white p-5 shadow-[var(--shadow-premium)] sm:left-auto sm:right-6 sm:max-w-sm md:bottom-6"
     >
       <p className="text-sm font-semibold">Cookies</p>
       <p className="mt-1.5 text-[0.8125rem] leading-relaxed text-muted-foreground">
@@ -53,21 +53,21 @@ export function CookieBanner() {
       <div className="mt-4 flex flex-wrap gap-2">
         <button
           type="button"
-          className="min-h-[40px] rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+          className="min-h-[40px] rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
           onClick={() => choose("accepted")}
         >
           Accept
         </button>
         <button
           type="button"
-          className="min-h-[40px] rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold"
+          className="min-h-[40px] rounded-md border border-border bg-surface px-4 py-2 text-sm font-semibold"
           onClick={() => choose("rejected")}
         >
           Reject
         </button>
         <Link
           href="/cookies"
-          className="inline-flex min-h-[40px] items-center rounded-full px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+          className="inline-flex min-h-[40px] items-center rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
         >
           Manage
         </Link>

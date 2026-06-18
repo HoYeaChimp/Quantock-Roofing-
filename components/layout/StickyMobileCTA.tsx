@@ -20,12 +20,12 @@ export function StickyMobileCTA() {
   return (
     <nav
       aria-label="Quick contact actions"
-      className="glass safe-bottom fixed inset-x-0 bottom-0 z-40 border-t border-border md:hidden"
+      className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t border-border bg-white shadow-[var(--shadow-soft)] md:hidden"
     >
       <div className="grid grid-cols-3 gap-1 p-2">
         <a
           href={telHref()}
-          className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-2xl font-semibold text-foreground transition-colors active:bg-foreground/5"
+          className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-md font-semibold text-foreground transition-colors active:bg-foreground/5"
           onClick={() => {
             trackPhoneClick("sticky_mobile");
             trackCtaClick("Call", "sticky_mobile");
@@ -38,7 +38,7 @@ export function StickyMobileCTA() {
           href={createWhatsAppLink({ page: "sticky_mobile" })}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-2xl font-semibold text-foreground transition-colors active:bg-foreground/5"
+          className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-md font-semibold text-foreground transition-colors active:bg-foreground/5"
           onClick={() => {
             trackWhatsAppClick("sticky_mobile");
             trackCtaClick("WhatsApp", "sticky_mobile");
@@ -49,7 +49,7 @@ export function StickyMobileCTA() {
         </a>
         <Link
           href="/quote"
-          className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-2xl bg-primary font-semibold text-primary-foreground"
+          className="flex min-h-[52px] flex-col items-center justify-center gap-0.5 rounded-md bg-primary font-semibold text-primary-foreground"
           onClick={() => {
             trackQuoteClick("sticky_mobile");
             trackCtaClick("Get a Quote", "sticky_mobile");

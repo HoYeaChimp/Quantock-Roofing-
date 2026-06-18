@@ -10,12 +10,7 @@ interface PremiumBackgroundProps {
   className?: string;
 }
 
-/**
- * Layered Apple-inspired background:
- * satin gradient mesh + drifting orbs + faint grid + grain + spotlight.
- * pointer-events: none; text contrast preserved; reduced motion respected
- * via the global animation kill-switch in globals.css.
- */
+/** Restrained professional background: soft colour wash, faint grid and grain. */
 export function PremiumBackground({
   variant = "light",
   intensity = "medium",
@@ -27,7 +22,7 @@ export function PremiumBackground({
       className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)}
     >
       <GradientMesh variant={variant} />
-      {intensity !== "low" && <AnimatedOrbs intensity={intensity} />}
+      {intensity === "high" && <AnimatedOrbs intensity="low" />}
       <GridPattern />
       {/* subtle radial spotlight */}
       <div

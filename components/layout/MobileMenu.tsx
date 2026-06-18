@@ -90,7 +90,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         aria-modal="true"
         aria-label="Site menu"
         className={cn(
-          "glass absolute inset-x-3 top-3 max-h-[calc(100dvh-1.5rem)] overflow-y-auto rounded-3xl p-6 shadow-[var(--shadow-premium)] transition-all duration-300",
+          "absolute inset-x-3 top-3 max-h-[calc(100dvh-1.5rem)] overflow-y-auto rounded-lg border border-border bg-white p-6 shadow-[var(--shadow-premium)] transition-all duration-300",
           open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
         )}
       >
@@ -118,7 +118,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block rounded-2xl px-4 py-3.5 text-base font-medium transition-colors hover:bg-foreground/5"
+                  className="block rounded-md px-4 py-3.5 text-base font-medium transition-colors hover:bg-foreground/5"
                   onClick={onClose}
                 >
                   {item.label}
@@ -131,7 +131,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         <div className="mt-6 space-y-2.5 border-t border-border pt-6">
           <Link
             href="/quote"
-            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground"
+            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 font-semibold text-primary-foreground"
             onClick={() => {
               trackCtaClick(site.primaryCTA, "mobile_menu");
               onClose();
@@ -144,7 +144,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             href={createWhatsAppLink({ page: "mobile_menu" })}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full bg-success px-6 py-3 font-semibold text-white"
+            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-md bg-success px-6 py-3 font-semibold text-white"
             onClick={() => {
               trackWhatsAppClick("mobile_menu");
               trackCtaClick(site.secondaryCTA, "mobile_menu");
@@ -156,7 +156,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           </a>
           <a
             href={telHref()}
-            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full border border-border bg-surface px-6 py-3 font-semibold"
+            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-md border border-border bg-surface px-6 py-3 font-semibold"
             onClick={() => {
               trackPhoneClick("mobile_menu");
               trackCtaClick(site.tertiaryCTA, "mobile_menu");
@@ -168,7 +168,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           </a>
           <Link
             href="/booking"
-            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-full border border-border bg-surface px-6 py-3 font-semibold"
+            className="flex min-h-[50px] w-full items-center justify-center gap-2 rounded-md border border-border bg-surface px-6 py-3 font-semibold"
             onClick={() => {
               trackCtaClick(site.bookingCTA, "mobile_menu");
               onClose();

@@ -7,7 +7,6 @@ import { Footer } from "@/components/layout/Footer";
 import { SkipToContent } from "@/components/layout/SkipToContent";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import { StickyDesktopCTA } from "@/components/layout/StickyDesktopCTA";
-import { CustomCursor } from "@/components/ui/CustomCursor";
 import { CookieBanner } from "@/components/CookieBanner";
 import { TrackingScripts } from "@/components/TrackingScripts";
 import { JsonLd } from "@/components/JsonLd";
@@ -59,7 +58,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <StickyMobileCTA />
         <StickyDesktopCTA />
         <CookieBanner />
-        <CustomCursor />
         <TrackingScripts />
         <JsonLd
           data={[organizationSchema(), localBusinessSchema(), websiteSchema()]}

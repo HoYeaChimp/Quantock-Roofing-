@@ -13,7 +13,6 @@ import {
   trackWhatsAppClick,
 } from "@/lib/tracking";
 import { Icon } from "@/components/ui/Icon";
-import { Magnetic } from "@/components/ui/Magnetic";
 
 /**
  * Desktop sticky CTA cluster — appears after the hero has scrolled past.
@@ -32,11 +31,10 @@ export function StickyDesktopCTA() {
       )}
       aria-hidden={!visible}
     >
-      <div className="glass flex items-center gap-2 rounded-full border border-border p-2 shadow-[var(--shadow-premium)]">
-        <Magnetic strength={6}>
+      <div className="flex items-center gap-2 rounded-lg border border-border bg-white p-2 shadow-[var(--shadow-premium)]">
           <a
             href={telHref()}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-foreground transition-colors hover:bg-foreground/5"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md text-foreground transition-colors hover:bg-foreground/5"
             aria-label={`Call ${site.phoneDisplay}`}
             onClick={() => {
               trackPhoneClick("sticky_desktop");
@@ -47,13 +45,11 @@ export function StickyDesktopCTA() {
           >
             <Icon name="phone" className="h-5 w-5" />
           </a>
-        </Magnetic>
-        <Magnetic strength={6}>
           <a
             href={createWhatsAppLink({ page: "sticky_desktop" })}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-success transition-colors hover:bg-success/10"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md text-success transition-colors hover:bg-success/10"
             aria-label="Message us on WhatsApp"
             onClick={() => {
               trackWhatsAppClick("sticky_desktop");
@@ -64,11 +60,9 @@ export function StickyDesktopCTA() {
           >
             <Icon name="whatsapp" className="h-5 w-5" />
           </a>
-        </Magnetic>
-        <Magnetic strength={6}>
           <Link
             href="/quote"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:brightness-110"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:bg-[#001674]"
             onClick={() => {
               trackQuoteClick("sticky_desktop");
               trackCtaClick(site.primaryCTA, "sticky_desktop");
@@ -79,7 +73,6 @@ export function StickyDesktopCTA() {
             <Icon name="file-text" className="h-4 w-4" />
             Get a Quote
           </Link>
-        </Magnetic>
       </div>
     </div>
   );

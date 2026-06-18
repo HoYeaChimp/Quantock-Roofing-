@@ -11,25 +11,24 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function AppleInspiredHero() {
   return (
-    <section className="theme-dark relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-44">
-      <PremiumBackground variant="hero" intensity="high" />
+    <section className="theme-dark relative overflow-hidden border-b border-white/10 pb-20 pt-32 md:pb-24 md:pt-40">
+      <PremiumBackground variant="hero" intensity="low" />
 
       <Container size="wide" className="relative">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
           <div className="max-w-xl">
             <Reveal>
               <p className="text-eyebrow mb-4 text-white/70">
-                New roofs - repairs - flat roofing - Somerset, Bristol & Devon
+                Local roofing contractors - based near Bridgwater
               </p>
               <h1 className="text-display text-balance">
-                Premium roofing contractors across{" "}
+                Professional roofers across{" "}
                 <span className="text-primary">Somerset, Bristol & Devon</span>
               </h1>
               <p className="text-lead mt-6 max-w-lg text-pretty">
-                Clear roofing advice, free written quotes and careful
-                workmanship from a local team based near Bridgwater. Send
-                photos by WhatsApp, call for urgent advice, or request a free
-                roofing quote online.
+                New roofs, roof repairs, flat roofing and roofline work from a
+                local team that gives clear advice, written quotes and careful
+                workmanship without the sales pressure.
               </p>
             </Reveal>
 

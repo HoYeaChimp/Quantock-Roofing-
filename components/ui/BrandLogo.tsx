@@ -22,8 +22,8 @@ export function BrandLogo({
     <Image
       src="/brand/quantock-roofing-logo.png"
       alt={site.businessName}
-      width={1400}
-      height={855}
+      width={1500}
+      height={886}
       priority={priority}
       className={cn("h-auto w-full object-contain", imageClassName)}
       sizes="(max-width: 640px) 160px, 220px"
@@ -33,7 +33,7 @@ export function BrandLogo({
   const logoFrame = cn(
     "inline-flex items-center justify-center",
     framed &&
-      "rounded-xl border border-white/35 bg-white/45 p-2 shadow-[var(--shadow-soft)] backdrop-blur-xl",
+      "rounded-md border border-border bg-white px-3 py-2 shadow-[var(--shadow-soft)]",
     className
   );
 

@@ -12,7 +12,6 @@ import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { TrustIllustration } from "@/components/visuals/TrustIllustration";
-import { AppleDepthCards } from "@/components/visuals/AppleDepthCards";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Quantock Roofing | Local Roofing Team Near Bridgwater",
@@ -44,13 +43,13 @@ export default function AboutPage() {
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
-              <AppleDepthCards>
+              <div className="card-premium border-l-4 border-l-primary p-7 sm:p-9">
                 <p className="text-eyebrow mb-3">Our approach</p>
                 <p className="text-title text-balance">
                   Repair what can be repaired. Replace what has genuinely
                   reached the end of its life. Put the advice in plain English.
                 </p>
-              </AppleDepthCards>
+              </div>
             </Reveal>
             <div>
               <SectionHeading

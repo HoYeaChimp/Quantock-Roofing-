@@ -21,14 +21,6 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 
-/**
- * Apple-inspired animated header.
- * - spacious + translucent at the top of the page
- * - contracts into a compact floating glass capsule on scroll
- * - scroll progress indicator along the top edge
- * - keyboard accessible, reduced-motion safe (transitions snap via the
- *   global reduced-motion kill switch)
- */
 export function AnimatedHeader() {
   const scrolled = useScrollState(32);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,16 +41,16 @@ export function AnimatedHeader() {
       <header className="fixed inset-x-0 top-0 z-50">
         <div
           className={cn(
-            "mx-auto transition-all duration-500 ease-out",
-            scrolled ? "mt-3 max-w-5xl px-3 sm:px-4" : "max-w-none px-0"
+            "mx-auto transition-all duration-300 ease-out",
+            scrolled ? "max-w-none px-0" : "max-w-none px-0"
           )}
         >
           <div
             className={cn(
-              "flex items-center justify-between gap-4 transition-all duration-500 ease-out",
+              "flex items-center justify-between gap-4 border-b border-border bg-white px-5 py-3 text-foreground shadow-[var(--shadow-soft)] transition-all duration-300 ease-out sm:px-8",
               scrolled
-                ? "glass rounded-full border border-border px-4 py-2 shadow-[var(--shadow-premium)] sm:px-6"
-                : "border-b border-white/10 bg-[#050713]/70 px-5 py-4 text-white backdrop-blur-xl sm:px-8"
+                ? "py-2.5"
+                : "py-3.5"
             )}
           >
             {/* Brand */}
@@ -66,7 +58,7 @@ export function AnimatedHeader() {
               href="/"
               className={cn(
                 "shrink-0 transition-all duration-500",
-                scrolled ? "w-[116px] sm:w-[132px]" : "w-[132px] sm:w-[152px]"
+                scrolled ? "w-[126px] sm:w-[148px]" : "w-[144px] sm:w-[168px]"
               )}
               aria-label={`${site.businessName} — home`}
             >
@@ -95,17 +87,15 @@ export function AnimatedHeader() {
                         href={item.href}
                         aria-current={active ? "page" : undefined}
                         className={cn(
-                          "rounded-full px-3 py-2 text-sm transition-colors duration-300",
+                          "rounded-md px-3 py-2 text-sm transition-colors duration-200",
                           active
                             ? cn(
                                 "font-semibold",
-                                scrolled ? "text-foreground" : "text-white"
+                                "bg-primary/8 text-primary"
                               )
                             : cn(
                                 "font-medium",
-                                scrolled
-                                  ? "text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
-                                  : "text-white/72 hover:bg-white/10 hover:text-white"
+                                "text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
                               )
                         )}
                       >
@@ -122,10 +112,7 @@ export function AnimatedHeader() {
               <a
                 href={telHref()}
                 className={cn(
-                  "hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold transition-colors",
-                  scrolled
-                    ? "text-foreground hover:bg-foreground/5"
-                    : "text-white hover:bg-white/10",
+                  "hidden items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-foreground/5",
                   scrolled ? "xl:inline-flex" : "lg:inline-flex"
                 )}
                 onClick={() => trackPhoneClick("header")}
@@ -139,7 +126,7 @@ export function AnimatedHeader() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Message us on WhatsApp"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full text-success transition-colors hover:bg-success/10"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md text-success transition-colors hover:bg-success/10"
                 onClick={() => trackWhatsAppClick("header")}
                 data-cursor="lead"
               >
@@ -148,7 +135,7 @@ export function AnimatedHeader() {
               <Link
                 href="/quote"
                 className={cn(
-                  "inline-flex items-center justify-center rounded-full bg-primary font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-500 hover:brightness-110",
+                  "inline-flex items-center justify-center rounded-md bg-primary font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-200 hover:bg-[#001674]",
                   scrolled
                     ? "px-4 py-2 text-sm"
                     : "px-5 py-2.5 text-sm"
@@ -167,7 +154,7 @@ export function AnimatedHeader() {
             <div className="flex items-center gap-1.5 lg:hidden">
               <Link
                 href="/quote"
-                className="inline-flex items-center rounded-full bg-primary px-3.5 py-2 text-[0.8125rem] font-semibold text-primary-foreground"
+                className="inline-flex items-center rounded-md bg-primary px-3.5 py-2 text-[0.8125rem] font-semibold text-primary-foreground"
                 onClick={() => {
                   trackQuoteClick("header_mobile");
                   trackCtaClick("Quote", "header_mobile");
@@ -178,10 +165,7 @@ export function AnimatedHeader() {
               <button
                 type="button"
                 className={cn(
-                  "inline-flex h-11 w-11 items-center justify-center rounded-full transition-colors",
-                  scrolled
-                    ? "text-foreground hover:bg-foreground/5"
-                    : "text-white hover:bg-white/10"
+                  "inline-flex h-11 w-11 items-center justify-center rounded-md text-foreground transition-colors hover:bg-foreground/5"
                 )}
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={menuOpen}

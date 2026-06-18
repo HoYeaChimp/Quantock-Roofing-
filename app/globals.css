@@ -5,34 +5,34 @@
    Edit colours here; components consume the variables below.
    ============================================================ */
 :root {
-  --background: #f4f6fa;
-  --foreground: #202126;
+  --background: #f6f7f9;
+  --foreground: #1f2933;
   --surface: #ffffff;
-  --surface-elevated: #eef1f6;
-  --muted: #dde2ea;
-  --muted-foreground: #5d6068;
+  --surface-elevated: #eef2f6;
+  --muted: #dde4ec;
+  --muted-foreground: #56616c;
   --primary: #001b8f;
   --primary-foreground: #ffffff;
-  --secondary: #3d3e43;
-  --accent: #a6a8ad;
+  --secondary: #40454d;
+  --accent: #8d949d;
   --accent-foreground: #ffffff;
-  --border: rgba(37, 37, 41, 0.12);
+  --border: rgba(31, 41, 51, 0.14);
   --card: #ffffff;
-  --card-foreground: #252529;
-  --success: #1f9d55;
+  --card-foreground: #1f2933;
+  --success: #17864d;
   --warning: #b7791f;
   --danger: #c53030;
-  --glass-bg: rgba(255, 255, 255, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.64);
-  --shadow-soft: 0 2px 12px rgba(32, 33, 38, 0.08);
-  --shadow-premium: 0 28px 70px -22px rgba(0, 27, 143, 0.24);
-  --orb-1: rgba(0, 27, 143, 0.16);
-  --orb-2: rgba(66, 66, 71, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(31, 41, 51, 0.12);
+  --shadow-soft: 0 1px 2px rgba(31, 41, 51, 0.08), 0 8px 22px rgba(31, 41, 51, 0.06);
+  --shadow-premium: 0 16px 34px -20px rgba(0, 27, 143, 0.28);
+  --orb-1: rgba(0, 27, 143, 0.08);
+  --orb-2: rgba(66, 66, 71, 0.06);
   --orb-3: rgba(155, 157, 157, 0.16);
-  --mesh-opacity: 0.45;
-  --grid-opacity: 0.075;
-  --spotlight-opacity: 0.38;
-  --noise-opacity: 0.025;
+  --mesh-opacity: 0.18;
+  --grid-opacity: 0.035;
+  --spotlight-opacity: 0.18;
+  --noise-opacity: 0.015;
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
     Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
   --header-height: 4.5rem;
@@ -40,22 +40,22 @@
 
 /* Dark surfaces (final CTA bands, dark heroes) */
 .theme-dark {
-  --background: #050713;
+  --background: #071827;
   --foreground: #f5f5f7;
-  --primary: #6f86ff;
-  --surface: #0d1226;
-  --surface-elevated: #151a32;
-  --muted: #22283c;
-  --muted-foreground: #c4c6ce;
+  --primary: #7f97ff;
+  --surface: #102236;
+  --surface-elevated: #173149;
+  --muted: #25384b;
+  --muted-foreground: #d2d7dd;
   --border: rgba(245, 245, 247, 0.12);
   --card: #10162c;
   --card-foreground: #f5f5f7;
-  --glass-bg: rgba(11, 16, 36, 0.72);
-  --glass-border: rgba(245, 245, 247, 0.16);
+  --glass-bg: rgba(16, 34, 54, 0.88);
+  --glass-border: rgba(245, 245, 247, 0.14);
   --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.4);
   --shadow-premium: 0 24px 60px -16px rgba(0, 0, 0, 0.6);
-  --orb-1: rgba(0, 27, 143, 0.38);
-  --orb-2: rgba(155, 157, 157, 0.14);
+  --orb-1: rgba(0, 27, 143, 0.2);
+  --orb-2: rgba(155, 157, 157, 0.08);
   --orb-3: rgba(255, 255, 255, 0.08);
   --grid-opacity: 0.06;
   --noise-opacity: 0.04;
@@ -116,10 +116,10 @@ body {
    Typography scale (fluid, Apple-inspired)
    ============================================================ */
 .text-display {
-  font-size: clamp(2.5rem, 5.5vw + 1rem, 4.75rem);
-  line-height: 1.05;
+  font-size: clamp(2.35rem, 4.4vw + 0.9rem, 4.15rem);
+  line-height: 1.08;
   letter-spacing: 0;
-  font-weight: 700;
+  font-weight: 750;
 }
 .text-headline {
   font-size: clamp(1.875rem, 3vw + 0.75rem, 3rem);
@@ -140,7 +140,7 @@ body {
 }
 .text-eyebrow {
   font-size: 0.8125rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--primary);
@@ -152,8 +152,8 @@ body {
 .glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  backdrop-filter: blur(20px) saturate(1.5);
-  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .card-premium {
@@ -161,7 +161,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   box-shadow: var(--shadow-soft);
-  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .card-premium:hover {
   box-shadow: var(--shadow-premium);

@@ -50,11 +50,11 @@ interface ButtonProps {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-primary text-primary-foreground shadow-[var(--shadow-soft)] hover:brightness-110 active:scale-[0.98]",
+    "bg-primary text-primary-foreground shadow-[var(--shadow-soft)] hover:bg-[#001674] active:scale-[0.99]",
   secondary:
-    "bg-foreground text-background hover:opacity-90 active:scale-[0.98]",
+    "bg-foreground text-background hover:opacity-90 active:scale-[0.99]",
   whatsapp:
-    "bg-success text-white hover:brightness-110 active:scale-[0.98]",
+    "bg-success text-white hover:bg-[#117341] active:scale-[0.99]",
   outline:
     "border border-border bg-transparent text-foreground hover:bg-surface",
   ghost: "text-primary hover:bg-primary/8",
@@ -85,7 +85,7 @@ export function Button({
   trackLabel,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 select-none",
+    "inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-all duration-200 select-none",
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
     variantClasses[variant],
     sizeClasses[size],
